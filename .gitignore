@@ -7,6 +7,7 @@
 !.vscode/extentions.json
 npm-debug.log*
 .idea/
+.angular/
 node_modules/
 platforms/
 plugins/
