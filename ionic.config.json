@@ -1,0 +1,7 @@
+{
+  "name": "dbMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
