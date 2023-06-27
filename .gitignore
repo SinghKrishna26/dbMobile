@@ -1,0 +1,15 @@
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+!.vscode/settings.json
+!.vscode/extentions.json
+npm-debug.log*
+.idea/
+node_modules/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+www/
