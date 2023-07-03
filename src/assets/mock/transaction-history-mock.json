@@ -1,0 +1,32 @@
+{
+    "transactionList":[
+        {
+            "accountNumber":"478589652",
+            "amount":5000,
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"Withdraw from ATM",
+            "suspiciousFlag":false
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":5000,
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"Withdraw from ATM",
+            "suspiciousFlag":false
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":5000,
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"Withdraw from ATM",
+            "suspiciousFlag":true
+        }
+        
+    ]
+}

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Transaction History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <table>
+    <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Amount</th>
+      <th>Transaction Date</th>
+      <th>Location</th>
+    <th>Transaction Date</th>
+    <th></th>
+    </tr>
+  </thead>
+    <tr *ngFor="let trn of transactionData">
+<td>{{trn.accountNumber}}</td>
+<td>{{trn.amount}}</td>
+<td>{{trn.transactionDate}}</td>
+<td>{{trn.latitude}}' {{trn.longitude}}"</td>
+<td>{{trn.comment}}</td>
+<td><ion-icon *ngIf="trn.suspiciousFlag" name="alert-circle-outline" class="yellow"></ion-icon>
+  <ion-icon *ngIf="!trn.suspiciousFlag" name="checkmark-circle-outline" class="green"></ion-icon></td>
+    </tr>
+   
+  </table>
+</ion-content>
