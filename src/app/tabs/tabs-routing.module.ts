@@ -13,11 +13,11 @@ const routes: Routes = [
       // },
       {
         path: 'tab2',
-        loadChildren: () => import('../transaction-history/transaction-history.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../transaction-history/transaction-history.module').then(m => m.TransactionHistoryPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'genie',
+        loadChildren: () => import('../genie/genie.module').then(m => m.GeniePageModule)
       },
       {
         path: '',

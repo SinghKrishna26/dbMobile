@@ -1,0 +1,19 @@
+.home {
+    &__box{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    }
+    &__hr {
+    border-top: 3px dashed #bbb;
+    }
+    &__amount {
+    text-align: center;
+    padding: 10px;
+
+    }
+    &__info {
+        margin-bottom: 15px;
+    }
+}
