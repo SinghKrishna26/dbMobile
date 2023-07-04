@@ -6,8 +6,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-content>
+<ion-content class="ion-padding home" [fullscreen]="true">
+<ion-content>
+    <section class="home__box">
+      <div class="home__info">
+      <div>Account number : 5764856846398</div>
+      <div>Account holder name : Mr. Raj Aryan</div>
+      <div>Account type : Savings</div>
+      </div>
+      <hr class="home__hr">
+      <div class="home__amount">Rs 120000</div>
+    </section>
+  </ion-content>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="transaction-history">
@@ -20,5 +30,4 @@
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
-  </ion-content>
 </ion-content>
