@@ -8,7 +8,7 @@
 
 <ion-content class="ion-padding home" [fullscreen]="true">
 <ion-content>
-    <section class="home__box">
+    <section class="home__box" (click)="details()">
       <div class="home__info">
       <div>Account number : 5764856846398</div>
       <div>Account holder name : Mr. Raj Aryan</div>
@@ -17,17 +17,13 @@
       <hr class="home__hr">
       <div class="home__amount">Rs 120000</div>
     </section>
+
+    <div class="container" >
+      <div class="avatar">
+        <a (click)="navigate()">
+          <img src="../../assets/icon/genie.jpg" alt="Genie" />
+        </a>
+      </div>
+    </div>
   </ion-content>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="transaction-history">
-          <ion-icon name="list"></ion-icon>
-          <ion-label>Transaction History</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="genie">
-          <ion-icon name="list"></ion-icon>
-          <ion-label>Genie</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
 </ion-content>
