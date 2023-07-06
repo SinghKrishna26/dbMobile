@@ -1,0 +1,16 @@
+{
+   "accounts": [
+    {
+        "accountNumber":"478589652",
+        "accountHolderName":"Mr. Raj Aryan",
+        "accountType":"Savings",
+        "accountBalance":"INR 1,20,000"
+    },
+    {
+        "accountNumber":"5764856846398",
+        "accountHolderName":"Mr. Raj Aryan",
+        "accountType":"Current",
+        "accountBalance":"INR 1,20,000"
+    }
+]
+}

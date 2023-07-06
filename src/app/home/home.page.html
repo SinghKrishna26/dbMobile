@@ -8,7 +8,7 @@
 
 <ion-content class="ion-padding home" [fullscreen]="true">
 <ion-content>
-    <section class="home__box" (click)="details()">
+    <!-- <section *ngFor="let ac of accountsData" class="home__box" (click)="details()">
       <div class="home__info">
       <div>Account number : 5764856846398</div>
       <div>Account holder name : Mr. Raj Aryan</div>
@@ -16,7 +16,18 @@
       </div>
       <hr class="home__hr">
       <div class="home__amount">Rs 120000</div>
-    </section>
+    </section> -->
+<div *ngFor="let ac of accountsData">
+    <ion-card type="button" (click)="details(ac)">
+      <ion-card-header>
+        <ion-card-subtitle>Account number : {{ac.accountNumber}}</ion-card-subtitle>
+        <ion-card-subtitle>Account holder name : {{ac.accountHolderName}}</ion-card-subtitle>
+        <ion-card-subtitle>Account type : {{ac.accountType}}</ion-card-subtitle>
+      </ion-card-header>
+      <hr class="home__hr">
+      <ion-card-subtitle class="home__amount">{{ac.accountBalance}}</ion-card-subtitle>
+    </ion-card>
+  </div>
 
     <div class="container" >
       <div class="avatar">

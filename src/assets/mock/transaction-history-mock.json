@@ -2,30 +2,93 @@
     "transactionList":[
         {
             "accountNumber":"478589652",
-            "amount":5000,
+            "amount":"INR 5,000",
             "transactionDate": "2012-09-17T13:17:52.690+0000",
             "latitude":71.12,
             "longitude":72.12,
             "comment":"Withdraw from ATM",
-            "suspiciousFlag":false
+            "suspiciousFlag":false,
+            "type":"debit"
         },
         {
             "accountNumber":"478589652",
-            "amount":5000,
+            "amount":"INR 50,000",
             "transactionDate": "2012-09-17T13:17:52.690+0000",
             "latitude":71.12,
             "longitude":72.12,
-            "comment":"Withdraw from ATM",
-            "suspiciousFlag":false
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
         },
         {
             "accountNumber":"478589652",
-            "amount":5000,
+            "amount":"INR 5,000",
             "transactionDate": "2012-09-17T13:17:52.690+0000",
             "latitude":71.12,
             "longitude":72.12,
             "comment":"Withdraw from ATM",
-            "suspiciousFlag":true
+            "suspiciousFlag":true,
+            "type":"debit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
+        },
+        {
+            "accountNumber":"478589652",
+            "amount":"INR 50,000",
+            "transactionDate": "2012-09-17T13:17:52.690+0000",
+            "latitude":71.12,
+            "longitude":72.12,
+            "comment":"ABC Solutions Pvt. Ltd.",
+            "suspiciousFlag":false,
+            "type":"credit"
         }
         
     ]

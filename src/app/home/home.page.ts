@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { TransactionHistoryService } from '../transaction-history/transaction-history.service';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +10,25 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
+  public thSubscription :Subscription | undefined;
+  public accountsData:any;
+  constructor(private router: Router, private thService: TransactionHistoryService) {}
+
+  ngOnInit(){
+    this.thSubscription=  this.thService.getAccounts().subscribe(res=>{
+      this.accountsData=res['accounts'];
+    })
+  }
 
   navigate(){
     this.router.navigate(['/home/genie'])
   }
 
-  details(){
-    this.router.navigate(['/home/transaction-history'])
+  details(ac: any){
+    // let routeData: NavigationExtras = {
+    //    accountNumber
+    // }
+    this.router.navigate(['/home/transaction-history'],{state:{accountNumber:ac.accountNumber}});
   }
 
 }
