@@ -1,32 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Transaction History
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Transaction History</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <table>
-    <thead>
-    <tr>
-      <th>Account Number</th>
-      <th>Amount</th>
-      <th>Transaction Date</th>
-      <th>Location</th>
-    <th>Transaction Date</th>
-    <th></th>
-    </tr>
-  </thead>
-    <tr *ngFor="let trn of transactionData">
-<td>{{trn.accountNumber}}</td>
-<td>{{trn.amount}}</td>
-<td>{{trn.transactionDate}}</td>
-<td>{{trn.latitude}}' {{trn.longitude}}"</td>
-<td>{{trn.comment}}</td>
-<td><ion-icon *ngIf="trn.suspiciousFlag" name="alert-circle-outline" class="yellow"></ion-icon>
-  <ion-icon *ngIf="!trn.suspiciousFlag" name="checkmark-circle-outline" class="green"></ion-icon></td>
-    </tr>
-   
-  </table>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Account number : 5764856846398</ion-card-subtitle>
+      <ion-card-subtitle>Account holder name : Mr. Raj Aryan</ion-card-subtitle>
+      <ion-card-subtitle>Account type : Savings</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Transactions</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Date</ion-col>
+          <ion-col>Type</ion-col>
+          <ion-col>Location</ion-col>
+          <ion-col>Amount</ion-col>
+        </ion-row>
+        <div *ngFor="let trn of transactionData">
+        <ion-row>
+          <ion-col>{{trn.transactionDate | date :'short' }}</ion-col>
+          <ion-col>{{trn.comment}}</ion-col>
+          <ion-col>{{trn.latitude}}' {{trn.longitude}}"</ion-col>
+          <ion-col><ion-icon class="green" *ngIf="trn.type === 'credit'" name="arrow-down-outline"></ion-icon> 
+            <ion-icon class="red" *ngIf="trn.type === 'debit'" name="arrow-up-outline"></ion-icon> {{trn.amount}}</ion-col>
+        </ion-row>
+      </div>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

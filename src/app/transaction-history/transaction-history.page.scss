@@ -1,12 +1,21 @@
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
+ion-card{
+  background-color: aliceblue;
+}
+
+ion-card-subtitle{
+  color:black;
+}
+
+ion-col{
+  color:black;
+}
 
   .yellow{
     color:yellow
   }
   .green{
     color:green;
+  }
+  .red{
+    color:red;
   }
