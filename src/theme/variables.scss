@@ -3,6 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
+  /** app background **/
+  --ion-background-color: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
   /** primary **/
   --ion-color-primary: #3880FF;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -234,3 +236,13 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+    /*
+   * Alert Theme
+   * -------------------------------------------
+   */
+
+   .alert-wrapper.sc-ion-alert-md {
+    background: #ffffff;
+   }
+   $alert-md-background-color:#F35E5D;

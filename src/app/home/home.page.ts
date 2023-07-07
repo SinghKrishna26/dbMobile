@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
+  constructor(private navController: NavController,private router: Router) {}
 
   navigate(){
+    // this.navController.navigateForward('/home/genie');
     this.router.navigate(['/home/genie'])
   }
 

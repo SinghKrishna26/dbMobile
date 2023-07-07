@@ -1,26 +1,42 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Home
+      Deutsche Bank
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding home" [fullscreen]="true">
 <ion-content>
+  <div class="home__icon"><i class="fa fa-bank"></i>
+  <div class="home__itext">Accounts</div>
+  </div>
+
     <section class="home__box" (click)="details()">
       <div class="home__info">
-      <div>Account number : 5764856846398</div>
-      <div>Account holder name : Mr. Raj Aryan</div>
-      <div>Account type : Savings</div>
+      <div>5764856846398</div>
+      <div>Mr. Raj Aryan</div>
+      <div class="home__type">savings</div>
       </div>
       <hr class="home__hr">
-      <div class="home__amount">Rs 120000</div>
+      <div class="home__amount"><i class="fa fa-rupee"> 120000</i>  </div>
+      <i class='fa fa-angle-right home__ricon'></i>
+    </section>
+
+    <section class="home__box" (click)="details()">
+      <div class="home__info">
+      <div>5764856846398</div>
+      <div>Mr. Raj Aryan</div>
+      <div class="home__type">savings</div>
+      </div>
+      <hr class="home__hr">
+      <div class="home__amount"><i class="fa fa-rupee"></i> 120000</div>
+      <i class='fa fa-angle-right home__ricon'></i>
     </section>
 
     <div class="container" >
       <div class="avatar">
-        <a (click)="navigate()">
+        <a  (click)="navigate()">
           <img src="../../assets/icon/genie.jpg" alt="Genie" />
         </a>
       </div>

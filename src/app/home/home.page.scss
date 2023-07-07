@@ -1,21 +1,47 @@
 .home {
+    $self:&;
     &__box{
     border: 1px solid;
     border-radius: 10px;
     padding: 10px 20px;
-    background-color: aliceblue;
+    background-color: white;
     color: black;
+    margin: 10px 0px;
+    position: relative;
     }
     &__hr {
     border-top: 3px dashed #bbb;
+    width: 75%;
     }
     &__amount {
     text-align: center;
     padding: 10px;
-
+    font-size: 20px;
+    color: #05537e;
     }
     &__info {
         margin-bottom: 15px;
+        text-align: center;
+        #{$self}__type{
+            font-size:14px;
+            color:grey;
+        }
+    }
+    &__icon {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+    }
+    &__itext {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    &__ricon {
+        position: absolute;
+        right: 20px;
+        top: 41%;
+        font-size: 40px;
+        color: #05537e;
     }
 
 @keyframes float {
@@ -55,7 +81,4 @@
 	animation: float 6s ease-in-out infinite;
 	img { width: 100%; height: auto; }
 }
-
-
-
 }

@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Transaction History
+      Transactions  
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <table>
+<ion-content class="transaction" [fullscreen]="true">
+  <!-- <table>
     <thead>
     <tr>
       <th>Account Number</th>
@@ -28,5 +31,64 @@
   <ion-icon *ngIf="!trn.suspiciousFlag" name="checkmark-circle-outline" class="green"></ion-icon></td>
     </tr>
    
-  </table>
+  </table> -->
+
+
+  <section class="transaction__header">
+    <div class="transaction__row">
+      <span class="transaction__columnOne">
+        <div class="transaction__label">A/c Number</div>
+        <div class="transaction__value">564765745476</div>
+      </span>
+      <span class="transaction__columnTwo">
+        <div class="transaction__label">Total Available Balance</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> 143,559.74</div>
+      </span>
+    </div>
+    <div class="transaction__row">
+      <span class="transaction__columnOne">
+        <div class="transaction__label">Available Balance*</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> 42,261.55</div>
+      </span>
+      <span class="transaction__columnTwo">
+        <div class="transaction__label">Linked Available Balance</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> 101,298.19</div>
+      </span>
+    </div>
+  </section>
+  <hr>
+  <section class="transaction__statement">
+    <div class="transaction__row">
+      <!-- <span class="transaction__date">Date</span> -->
+      <span class="transaction__details">
+          <div>UPI/317656747/bill/mseb</div>
+          <div>Location : 71.12' 72.12''</div>
+          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
+      </span>
+      <span class="transaction__icon"><i class="fa fa-check-circle"></i></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
+    </div>
+
+    <div class="transaction__row">
+      <!-- <span class="transaction__date">Date</span> -->
+      <span class="transaction__details">
+          <div>UPI/317656747/bill/mseb</div>
+          <div>Location : 71.12' 72.12''</div>
+          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
+      </span>
+      <span class="transaction__icon"><i class="fa fa-exclamation-triangle"></i></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
+    </div>
+
+    <div class="transaction__row">
+      <!-- <span class="transaction__date">Date</span> -->
+      <span class="transaction__details">
+          <div>UPI/317656747/bill/mseb</div>
+          <div>Location : 71.12' 72.12''</div>
+          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
+      </span>
+      <span class="transaction__icon"><i class="fa fa-check-circle"></i></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
+    </div>
+  </section>
 </ion-content>
