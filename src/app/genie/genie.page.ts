@@ -11,11 +11,11 @@ export class GeniePage {
 
   constructor(private _alertController: AlertController) {}
 
-  async presentAlert() {
+  async presentAlert(status:string) {
     const alert = await this._alertController.create({
       // header: 'Alert',
       // subHeader: 'Important message',
-      message: 'You have successfully activated dbGenie !!',
+      message: `You have successfully ${status} dbGenie !!`,
       buttons: ['OK'],
     });
 
@@ -23,7 +23,11 @@ export class GeniePage {
   }
 
   checkboxChange() {
-    console.log(this.genieCheckbox)
+    if(this.genieCheckbox){
+    this.presentAlert("activated");
+    } else {
+      this.presentAlert("de-activated");
+    }
   }
 
 }

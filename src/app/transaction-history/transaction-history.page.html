@@ -38,57 +38,42 @@
     <div class="transaction__row">
       <span class="transaction__columnOne">
         <div class="transaction__label">A/c Number</div>
-        <div class="transaction__value">564765745476</div>
+        <div class="transaction__value">{{navParam.accountNumber}}</div>
       </span>
       <span class="transaction__columnTwo">
         <div class="transaction__label">Total Available Balance</div>
-        <div class="transaction__value"><i class="fa fa-rupee"></i> 143,559.74</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.accountBalance}}</div>
       </span>
     </div>
     <div class="transaction__row">
       <span class="transaction__columnOne">
         <div class="transaction__label">Available Balance*</div>
-        <div class="transaction__value"><i class="fa fa-rupee"></i> 42,261.55</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.actualBalance}}</div>
       </span>
       <span class="transaction__columnTwo">
         <div class="transaction__label">Linked Available Balance</div>
-        <div class="transaction__value"><i class="fa fa-rupee"></i> 101,298.19</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.linkedFd}}</div>
       </span>
     </div>
   </section>
   <hr>
   <section class="transaction__statement">
-    <div class="transaction__row">
-      <!-- <span class="transaction__date">Date</span> -->
+    <div class="transaction__row" *ngFor="let trn of transactionData">
       <span class="transaction__details">
-          <div>UPI/317656747/bill/mseb</div>
-          <div>Location : 71.12' 72.12''</div>
-          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
+          <div>{{trn.channel}}/{{trn.type}}/{{trn.transactionNumber}}/{{trn.merchant}}/{{trn.comment}}</div>
+          <div> {{trn.latitude}}' {{trn.longitude}}"</div>
+          <div>{{trn.transactionDate | date :'short' }}</div>
       </span>
-      <span class="transaction__icon"><i class="fa fa-check-circle"></i></span>
-      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
+      <span class="transaction__icon" *ngIf="!trn.suspiciousFlag, else suspicious"><i class="fa fa-check-circle"></i></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000<span *ngIf="trn.type == '01', else cr"><span class="transaction__type">Dr</span></span></span>
     </div>
 
-    <div class="transaction__row">
-      <!-- <span class="transaction__date">Date</span> -->
-      <span class="transaction__details">
-          <div>UPI/317656747/bill/mseb</div>
-          <div>Location : 71.12' 72.12''</div>
-          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
-      </span>
+    <ng-template #suspicious>
       <span class="transaction__icon"><i class="fa fa-exclamation-triangle"></i></span>
-      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
-    </div>
+    </ng-template>
 
-    <div class="transaction__row">
-      <!-- <span class="transaction__date">Date</span> -->
-      <span class="transaction__details">
-          <div>UPI/317656747/bill/mseb</div>
-          <div>Location : 71.12' 72.12''</div>
-          <div>Timestamp : 2012-09-17T13:17:52.690+0000</div>
-      </span>
-      <span class="transaction__icon"><i class="fa fa-check-circle"></i></span>
-      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000</span>
-    </div>
+    <ng-template #cr>
+      <span class="transaction__type-cr">Cr</span>
+    </ng-template>
   </section>
 </ion-content>

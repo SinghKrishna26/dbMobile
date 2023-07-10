@@ -11,7 +11,12 @@ export class TransactionHistoryService {
   constructor(private http: HttpClient) { }
 
   getTransactionHistoryList(): Observable<any>{
-    return this.http.get('./../../assets/mock/transaction-history-mock.json');
+    return this.http.get('./../../assets/mock/transaction-history-mock.json')
+
+  }
+
+  getAccounts():Observable<any>{
+    return this.http.get('./../../assets/mock/accounts-mock.json');
   }
 
 }

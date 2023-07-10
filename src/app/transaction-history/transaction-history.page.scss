@@ -14,7 +14,7 @@ td, th {
 .transaction {
   $self:&;
   // --ion-background-color: rgb(220 215 215 / 30%);
-  --ion-background-color: #4CBFFF;
+  --ion-background-color: #83c0e1;
   &__header {
     padding: 20px;
 
@@ -63,5 +63,16 @@ td, th {
       margin: auto;
     }
   }
+  }
+
+  &__type{
+    padding-left: 5px;
+    font-size: 10px;
+    color: #ae0303;
+    &-cr{
+      padding-left: 5px;
+      font-size: 10px;
+      color:green
+    }
   }
 }
