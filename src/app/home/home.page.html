@@ -1,29 +1,118 @@
+<!-- side menu start -->
+<ion-menu class="sideMenu" contentId="main-content">
+  <ion-header span class="sideMenu__header">
+    <ion-toolbar>
+      <ion-title>Deutsche Bank 
+        <ion-menu-toggle>
+          <span class="sideMenu__leftArrow"><i class="fa fa-angle-left sideMenu__icon" aria-hidden="true"></i></span>
+        </ion-menu-toggle>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding sideMenu__content">
+    <ion-menu-toggle>
+      <ion-item (click)="navigate('home')">
+        <ion-label>
+          <h2>Home</h2>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item (click)="navigate('genie')">
+        <ion-label>
+          <h2>DbGenie</h2>
+        </ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>
+          <h2>Contact</h2>
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    <span class="sideMenu__logout" (click)="navigate('login')"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+    <div class="sideMenu__appInfo">
+      <ion-badge class="sideMenu__version" color="tertiary">v 7.5.1</ion-badge>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<!-- side menu end -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Home
+      <ion-menu-toggle>
+        <i class="fa fa-bars" aria-hidden="true"></i> 
+      </ion-menu-toggle>
+      <img src="../../assets/Deutsche_Bank-Logo.svg">
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<div class="ion-page" id="main-content"></div>
 <ion-content class="ion-padding home" [fullscreen]="true">
 <ion-content>
-    <section class="home__box" (click)="details()">
+  <div class="home__icon"><i class="fa fa-bank"></i>
+  <div class="home__itext">Accounts</div>
+  </div>
+
+    <section class="home__box" *ngFor="let ac of accountsData" (click)="details(ac)">
       <div class="home__info">
-      <div>Account number : 5764856846398</div>
-      <div>Account holder name : Mr. Raj Aryan</div>
-      <div>Account type : Savings</div>
+      <div>{{ac.accountNumber}}</div>
+      <div>{{ac.accountHolderName}}</div>
+      <div class="home__type">{{ac.accountType}}</div>
       </div>
       <hr class="home__hr">
-      <div class="home__amount">Rs 120000</div>
+      <div class="home__amount"><i class="fa fa-rupee"> {{ac.accountBalance}}</i>  </div>
+      <i class='fa fa-angle-right home__ricon'></i>
     </section>
 
     <div class="container" >
       <div class="avatar">
-        <a (click)="navigate()">
+        <a  (click)="navigate('genie')">
           <img src="../../assets/icon/genie.jpg" alt="Genie" />
         </a>
       </div>
     </div>
+    
+
+
+    <!-- <main class="container">
+      <p>Hello 👋 I'm</p>
+      <section class="animation">
+        <div class="first"><div>Genie </div></div>
+        <div class="second"><div>Click Me !! </div></div>
+        <div class="third"><div>to save more</div></div>
+      </section>
+    </main> -->
+
+    <!-- <section class="custom-social-proof" #notification>
+      <div class="custom-notification">
+        <div class="custom-notification-container">
+          <div class="custom-notification-image-wrapper">
+            <img src="../../assets/icon/genie.jpg" alt="Genie" />
+          </div>
+          <div class="custom-notification-content-wrapper">
+            <p class="custom-notification-content">
+              Mr.Nagarajan - Banglore<br>Purchased <b>4</b> Product Name   
+              <small>1 hour ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="custom-close"></div>
+      </div>
+    </section> -->
+
+
+
+
+    
   </ion-content>
 </ion-content>
+<!-- 
+
+<script>
+  setInterval(function(){ $(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+$(".custom-close").click(function() {
+  $(".custom-social-proof").stop().slideToggle('slow');
+});
+</script> -->

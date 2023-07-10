@@ -1,8 +1,13 @@
 .p-terms{
+--ion-background-color: #83c0e1;
 ion-checkbox {
     --size: 32px;
     --checkbox-background-checked: #6815ec;
   }
+ion-item {
+  --inner-border-width: 1px 0 1px 0;
+  margin-top: 70px;
+}
   
   ion-checkbox::part(container) {
     border-radius: 6px;

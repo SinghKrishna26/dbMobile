@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Transaction History
+      Transactions  
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <table>
+<ion-content class="transaction" [fullscreen]="true">
+  <!-- <table>
     <thead>
     <tr>
       <th>Account Number</th>
@@ -28,5 +31,49 @@
   <ion-icon *ngIf="!trn.suspiciousFlag" name="checkmark-circle-outline" class="green"></ion-icon></td>
     </tr>
    
-  </table>
+  </table> -->
+
+
+  <section class="transaction__header">
+    <div class="transaction__row">
+      <span class="transaction__columnOne">
+        <div class="transaction__label">A/c Number</div>
+        <div class="transaction__value">{{navParam.accountNumber}}</div>
+      </span>
+      <span class="transaction__columnTwo">
+        <div class="transaction__label">Total Available Balance</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.accountBalance}}</div>
+      </span>
+    </div>
+    <div class="transaction__row">
+      <span class="transaction__columnOne">
+        <div class="transaction__label">Available Balance*</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.actualBalance}}</div>
+      </span>
+      <span class="transaction__columnTwo">
+        <div class="transaction__label">Linked Available Balance</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.linkedFd}}</div>
+      </span>
+    </div>
+  </section>
+  <hr>
+  <section class="transaction__statement">
+    <div class="transaction__row" *ngFor="let trn of transactionData">
+      <span class="transaction__details">
+          <div>{{trn.channel}}/{{trn.type}}/{{trn.transactionNumber}}/{{trn.merchant}}/{{trn.comment}}</div>
+          <div> {{trn.latitude}}' {{trn.longitude}}"</div>
+          <div>{{trn.transactionDate | date :'short' }}</div>
+      </span>
+      <span class="transaction__icon" *ngIf="!trn.suspiciousFlag, else suspicious"><i class="fa fa-check-circle"></i></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000<span *ngIf="trn.type == '01', else cr"><span class="transaction__type">Dr</span></span></span>
+    </div>
+
+    <ng-template #suspicious>
+      <span class="transaction__icon"><i class="fa fa-exclamation-triangle"></i></span>
+    </ng-template>
+
+    <ng-template #cr>
+      <span class="transaction__type-cr">Cr</span>
+    </ng-template>
+  </section>
 </ion-content>
