@@ -49,7 +49,7 @@ export class HomePage {
     enabled: true,
     //layout: 'horizontal',
     borderWidth: 0,
-    align:'left'
+    // align:'left'
   },
   series: [{
       name: 'Brands',
