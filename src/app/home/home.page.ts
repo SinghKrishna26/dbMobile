@@ -49,6 +49,7 @@ export class HomePage {
     enabled: true,
     //layout: 'horizontal',
     borderWidth: 0,
+    align:'left'
   },
   series: [{
       name: 'Brands',
@@ -65,7 +66,7 @@ export class HomePage {
           name: 'Fuel',
           y: 4.63
       }, {
-          name: 'Resources & Books',
+          name: 'Resources',
           y: 2.44
       }, {
           name: 'Food',
