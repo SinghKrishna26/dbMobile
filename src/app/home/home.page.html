@@ -2,7 +2,7 @@
 <ion-menu class="sideMenu" contentId="main-content">
   <ion-header span class="sideMenu__header">
     <ion-toolbar>
-      <ion-title>Deutsche Bank 
+      <ion-title>FinGin 
         <ion-menu-toggle>
           <span class="sideMenu__leftArrow"><i class="fa fa-angle-left sideMenu__icon" aria-hidden="true"></i></span>
         </ion-menu-toggle>
@@ -64,6 +64,10 @@
       <hr class="home__hr">
       <div class="home__amount"><i class="fa fa-rupee"> {{ac.accountBalance}}</i>  </div>
       <i class='fa fa-angle-right home__ricon'></i>
+    </section>
+
+    <section class="home__box">
+      <div #charts></div>
     </section>
 
     <div class="container" >
