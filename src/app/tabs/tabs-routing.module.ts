@@ -15,10 +15,10 @@ const routes: Routes = [
         path: 'tab2',
         loadChildren: () => import('../transaction-history/transaction-history.module').then(m => m.TransactionHistoryPageModule)
       },
-      {
-        path: 'genie',
-        loadChildren: () => import('../genie/genie.module').then(m => m.GeniePageModule)
-      },
+      // {
+      //   path: 'genie',
+      //   loadChildren: () => import('../genie/genie.module').then(m => m.GeniePageModule)
+      // },
       {
         path: '',
         redirectTo: '/tabs/tab1',

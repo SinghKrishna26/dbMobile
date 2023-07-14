@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'genie',
     loadChildren: () => import('../genie/genie.module').then(m => m.GeniePageModule)
   }
+  // {
+  //   path: 'anomaly',
+  //   loadChildren: () => import('../anomaly/anomaly.module').then(m => m.AnomalyModule)
+  // }
 ];
 
 @NgModule({
