@@ -24,10 +24,6 @@ export class TransactionHistoryPage  implements OnDestroy{
   this.thSubscription=  this.thService.getTransactionHistoryList().subscribe(res=>{
       this.transactionData=res['transactionList'];
     })
-
-    this.thService.getPrediction().subscribe(res=>{
-      console.log("------------->",res)
-    })
   }
 
   ngOnDestroy(): void {

@@ -93,9 +93,13 @@ export class HomePage {
         this.router.navigate(['/home/genie'])
       break;
 
+      case 'spend':
+        this.router.navigate(['/spend'])
+      break;
+
       case 'login':
         this.router.navigate([''])
-        break;
+      break;
 
       default:
         this.router.navigate([''])
