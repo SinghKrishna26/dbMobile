@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'dbMobile',
+  appName: 'FinGin',
   webDir: 'www',
   server: {
     androidScheme: 'https'
