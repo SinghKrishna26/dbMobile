@@ -52,7 +52,7 @@
       </span>
       <span class="transaction__columnTwo">
         <div class="transaction__label">Linked Available Balance</div>
-        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.linkedFd}}</div>
+        <div class="transaction__value"><i class="fa fa-rupee"></i> {{navParam.linkedFD}}</div>
       </span>
     </div>
   </section>
@@ -65,7 +65,7 @@
           <div>{{trn.transactionDate | date :'short' }}</div>
       </span>
       <span class="transaction__icon" *ngIf="!trn.suspiciousFlag, else suspicious"><i class="fa fa-check-circle"></i></span>
-      <span class="transaction__amount"><i class="fa fa-rupee"></i> 6000<span *ngIf="trn.type == '01', else cr"><span class="transaction__type">Dr</span></span></span>
+      <span class="transaction__amount"><i class="fa fa-rupee"></i> {{trn.amount}}<span *ngIf="trn.type == '01', else cr"><span class="transaction__type">Dr</span></span></span>
     </div>
 
     <ng-template #suspicious>

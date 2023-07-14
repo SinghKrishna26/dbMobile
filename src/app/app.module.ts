@@ -14,6 +14,6 @@ import { AppComponent } from './app.component';
     navAnimation: iosTransitionAnimation,
     }), AppRoutingModule, CommonModule,HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,0 +1,17 @@
+.spend {
+    --ion-background-color: #83c0e1;
+    text-align: center;
+
+    &__form {
+        margin-top: 20px;
+    }
+    &__btn {
+        margin-top: 25px;
+    }
+    &__message {
+    border: 1px solid grey;
+    padding: 26px;
+    border-radius: 20px;
+    background: #d2eaff;
+    }
+}

@@ -5,16 +5,8 @@
         "accountHolderName":"Mr. Raj Aryan",
         "accountType":"Savings",
         "accountBalance":"143,559.74",
-        "linkedFd":"101,298.19",
+        "linkedFD":"101,298.19",
         "actualBalance":"42,261.55"
-    },
-    {
-        "accountNumber":"5764856846398",
-        "accountHolderName":"Mr. Shubhansh Shukla",
-        "accountType":"Current",
-        "accountBalance":"150,000.50",
-        "linkedFd":"105,298.19",
-        "actualBalance":"44,702.31"
     }
 ]
 }

@@ -6,10 +6,16 @@ ion-menu-toggle {
         color: #05537e;
     }
 }
+.text {
+    color: #05537e;
+}
 }
 ion-title {
     img {
         width: 180px;
+    }
+    .text {
+        color: #05537e;
     }
 }
 .sideMenu {
@@ -51,7 +57,7 @@ $self:&;
 }
 .home {
     $self:&;
-    &__box{
+    &__box {
     border: 1px solid;
     border-radius: 10px;
     padding: 10px 20px;
@@ -59,6 +65,14 @@ $self:&;
     color: black;
     margin: 10px 0px;
     position: relative;
+    }
+    &__chart {
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        margin: 10px 0px;
+        position: relative;
     }
     &__hr {
     border-top: 3px dashed #bbb;

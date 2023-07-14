@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Spend Analysis Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="spend ion-padding" [fullscreen]="true">
+
+<div class="spend__form">
+      <ion-list>
+        <!-- <ion-item>{{data.title}}</ion-item>
+        <ion-item>{{data.desc}}</ion-item> -->
+        <ion-item class="item-input">
+          <label class="item-input">
+            <ion-input label="Date" type="date" value="2013-01-08" [(ngModel)]="date"></ion-input>
+              </label>
+            </ion-item>
+          </ion-list>
+
+          <ion-item>
+            <ion-input [(ngModel)]="balance" label="Last Closing Balance" placeholder="Last Closing Balance"></ion-input>
+          </ion-item>
+
+
+          <ion-button class="spend__btn" [disabled]="!this.date || !this.balance" (click)="calculate()">Calculate</ion-button>
+
+          <p *ngIf="this.amount" class="spend__message">You might spend amount approx INR {{this.amount}} on {{this.date}} and FD sweep of amount INR {{this.fdAmount}} will take place</p>
+
+        </div>
+        <!-- <h3>{{data.dueDate | date: "MM-dd-yyyy"}}</h3> -->
+
+</ion-content>

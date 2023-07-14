@@ -2,7 +2,7 @@
 <ion-menu class="sideMenu" contentId="main-content">
   <ion-header span class="sideMenu__header">
     <ion-toolbar>
-      <ion-title>Deutsche Bank 
+      <ion-title><span class="text">FinGin</span> 
         <ion-menu-toggle>
           <span class="sideMenu__leftArrow"><i class="fa fa-angle-left sideMenu__icon" aria-hidden="true"></i></span>
         </ion-menu-toggle>
@@ -20,6 +20,12 @@
       <ion-item (click)="navigate('genie')">
         <ion-label>
           <h2>DbGenie</h2>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="navigate('spend')">
+        <ion-label>
+          <h2>Spend Analysis Calculator</h2>
         </ion-label>
       </ion-item>
       
@@ -44,7 +50,8 @@
       <ion-menu-toggle>
         <i class="fa fa-bars" aria-hidden="true"></i> 
       </ion-menu-toggle>
-      <img src="../../assets/Deutsche_Bank-Logo.svg">
+      <!-- <img src="../../assets/Deutsche_Bank-Logo.svg"> -->
+      <span class="text">FinGin</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -64,6 +71,10 @@
       <hr class="home__hr">
       <div class="home__amount"><i class="fa fa-rupee"> {{ac.accountBalance}}</i>  </div>
       <i class='fa fa-angle-right home__ricon'></i>
+    </section>
+
+    <section class="home__chart">
+      <div #charts></div>
     </section>
 
     <div class="container" >

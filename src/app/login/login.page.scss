@@ -109,9 +109,9 @@ a {
 .logo {
     opacity: 0.4;
     position: absolute;
-    top: 15%;
-    right: 55px;
-    width: 39px;
+    top: 18%;
+    right: 60px;
+    width: 25px;
 }
 
 .circle-one {
@@ -142,8 +142,14 @@ a {
     justify-content: space-between;
 }
 .dbIcon {
-    opacity: 0.8;
-    width: 85px;
+    opacity: 0.9;
+    img{
+    width: 45px;
+}
+.text {
+    color: #1e53b4;
+    font-weight: 500;
+}
 }
 
 .opacity {

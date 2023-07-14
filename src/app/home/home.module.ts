@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { TransactionHistoryPageModule } from '../transaction-history/transaction-history.module';
-
+import { HighchartsService } from '../high-charts.service';
 @NgModule({
   imports: [
     IonicModule,
@@ -14,6 +14,7 @@ import { TransactionHistoryPageModule } from '../transaction-history/transaction
     HomePageRoutingModule,
     TransactionHistoryPageModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers:[HighchartsService]
 })
 export class HomePageModule {}
