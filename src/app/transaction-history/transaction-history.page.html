@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+  <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -66,14 +66,38 @@
       </span>
       <span class="transaction__icon" *ngIf="!trn.suspiciousFlag, else suspicious"><i class="fa fa-check-circle"></i></span>
       <span class="transaction__amount"><i class="fa fa-rupee"></i> {{trn.amount}}<span *ngIf="trn.type == '01', else cr"><span class="transaction__type">Dr</span></span></span>
-    </div>
 
-    <ng-template #suspicious>
-      <span class="transaction__icon"><i class="fa fa-exclamation-triangle"></i></span>
+
+    <ng-template #suspicious >
+      <span class="transaction__icon" (click)="setOpen(true)"><i *ngIf="!modalTouched" class="fa fa-exclamation-triangle"></i>
+        <i *ngIf="trn.suspiciousFlag && modalTouched" class="fa fa-ban"></i></span>  
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Verify Transaction</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <p>
+              Your base location is 18.5204° N and 73.8567° E and this transaction took place at 28.7041° N and 77.1025° E
+            </p>
+            <p>Please confirm is this transaction was initiated by you.</p>
+            <form class="confirm-btn-position">
+              <ion-button class="opacity" (click)="confirmTrn(trn,'1')">Confirm</ion-button>
+              <ion-button class="opacity" (click)="confirmTrn(trn,'0')">Raise Dispute</ion-button>
+          </form>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
     </ng-template>
 
     <ng-template #cr>
       <span class="transaction__type-cr">Cr</span>
     </ng-template>
+    </div>
   </section>
 </ion-content>

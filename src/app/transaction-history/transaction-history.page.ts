@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
 import { Observable, Subscribable, Subscription } from 'rxjs';
 import { TransactionHistoryService } from './transaction-history.service';
@@ -14,6 +14,9 @@ export class TransactionHistoryPage  implements OnDestroy{
    public thSubscription :Subscription | undefined;
    public transactionData:any;
    public navParam:any;
+   isModalOpen = false;
+   modalTouched:boolean | undefined;
+
   constructor(private thService: TransactionHistoryService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(){
@@ -24,6 +27,22 @@ export class TransactionHistoryPage  implements OnDestroy{
   this.thSubscription=  this.thService.getTransactionHistoryList().subscribe(res=>{
       this.transactionData=res['transactionList'];
     })
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
+  confirmTrn(trn:any,status:string){
+   
+   if(status==='1'){
+    this.isModalOpen=false;
+    trn.suspiciousFlag=false;
+   }
+   else if (status==='0'){
+    this.isModalOpen=false;
+    this.modalTouched=true;
+   }
   }
 
   ngOnDestroy(): void {
